@@ -1,0 +1,3111 @@
+<style>
+/* =========================================
+   CSS CHO HEADER (KHÔNG XUNG ĐỘT)
+========================================= */
+.ga-header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #edf2f7; 
+    font-family: Arial, sans-serif;
+    position: relative;
+    z-index: 99;
+}
+
+.ga-header-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+}
+
+.ga-header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.ga-header-logo img {
+    height: 80px;
+    width: 300px;
+    display: block;
+    object-fit: contain;
+}
+
+.ga-nav-menu {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+}
+
+.ga-nav-link {
+    text-decoration: none;
+    color: #1f2937;
+    font-size: 17px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.ga-nav-link:hover, 
+.ga-nav-link.active {
+    color: #0284c7;
+}
+
+.ga-header-cta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #0277bd;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.ga-header-cta:hover {
+    background: #025e97;
+}
+
+.ga-cta-icon {
+    background: #ffffff;
+    color: #0277bd;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+    .ga-header-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .ga-nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+}
+
+/* =========================================
+   CSS CHO HERO BANNER (ẢNH LÀM BACKGROUND)
+========================================= */
+.ga-hero {
+    padding: 120px 20px; 
+    /* Giữ nguyên lớp phủ mờ, chỉ thay đổi phần url() ở cuối */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.1) 100%), 
+                url('../FULL\ ẢNH/IMG SECTION 1_HEROBANNER.jpg'); /* ĐIỀN ĐƯỜNG DẪN ../ CỦA BẠN VÀO ĐÂY */
+    background-size: cover; 
+    background-position: center right; 
+    background-repeat: no-repeat;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.ga-hero-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 500px;
+}
+
+/* Phần chữ bên trái chiếm 45% */
+.ga-left {
+    flex: 0 0 45%;
+    max-width: 45%;
+    position: relative;
+    z-index: 10;
+    padding-right: 30px; 
+}
+
+/* KHÔNG CẦN .ga-right VÀ .ga-hero-img NỮA NÊN ĐÃ BỎ ĐI ĐỂ CODE NHẸ HƠN */
+
+/* Responsive Hero */
+@media(max-width:992px){
+    .ga-hero {
+        /* Phủ mờ toàn bộ nền trên điện thoại để chữ dễ đọc */
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                    url('../FULL\ ẢNH/IMG SECTION 1_HEROBANNER.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .ga-hero-container{
+        flex-direction:column;
+        text-align:left; /* Căn trái cho đẹp trên mobile */
+        min-height: auto;
+    }
+    .ga-left{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: 0;
+    }
+}
+.ga-badge{
+    display:inline-block;
+    background:#e8f1ff;
+    color:#2563eb;
+    padding:10px 18px;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:700;
+    margin-bottom:24px;
+}
+
+.ga-title{
+    font-size:40px;
+    font-weight:700;
+    line-height:1.2;
+    color:#1b1f3b;
+    margin:0 0 28px;
+}
+
+.ga-title span{
+    color:#2563eb;
+}
+
+.ga-desc{
+    font-size:20px;
+    line-height:1.8;
+    color:#5f6b7a;
+    margin-bottom:32px;
+}
+
+.ga-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-bottom:38px;
+}
+
+.ga-item{
+    display:flex;
+    align-items:center;
+    font-size:17px;
+    font-weight:600;
+    color:#263246;
+}
+
+.ga-item:before{
+    content:"✔";
+    color:#2563eb;
+    margin-right:12px;
+    font-weight:bold;
+}
+
+.ga-buttons{
+    display:flex;
+    gap:18px;
+    margin-bottom:42px;
+    flex-wrap:wrap;
+}
+
+.ga-btn{
+    padding:18px 34px;
+    border-radius:16px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.ga-btn-primary{
+    background:#2563eb;
+    color:#fff;
+}
+
+.ga-btn-primary:hover{
+    background:#124fc8;
+}
+
+.ga-btn-outline{
+    border:2px solid #2563eb;
+    color:#2563eb;
+}
+
+.ga-btn-outline:hover{
+    background:#2563eb;
+    color:#fff;
+}
+
+/* Responsive Hero */
+@media(max-width:992px){
+    .ga-hero-container{
+        flex-direction:column;
+        text-align:center;
+        min-height: auto;
+    }
+    .ga-left{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: 0;
+    }
+    .ga-right{
+        position: relative;
+        top: 0;
+        transform: none;
+        width: 100%;
+        margin-top: 40px;
+    }
+    .ga-list{
+        grid-template-columns:1fr;
+    }
+    .ga-buttons{
+        justify-content:center;
+    }
+    .ga-title{
+        font-size:42px;
+    }
+}
+
+@media(max-width:576px){
+    .ga-title{
+        font-size:34px;
+    }
+    .ga-desc{
+        font-size:17px;
+    }
+    .ga-btn{
+        width:100%;
+        text-align:center;
+    }
+}
+</style>
+
+<header class="ga-header">
+    <div class="ga-header-container">
+        <div class="ga-header-logo">
+            <img src="../FULL ẢNH/IMG LOGO.jpg" alt="LADIGI Logo">
+        </div>
+        <nav class="ga-nav-menu">
+            <a href="#" class="ga-nav-link">Giới thiệu</a>
+            <a href="#" class="ga-nav-link">Dịch vụ SEO</a>
+            <a href="#" class="ga-nav-link active">Google Ads</a>
+            <a href="#" class="ga-nav-link">Thiết kế web</a>
+        </nav>
+        <div class="ga-header-action">
+            <a href="#" class="ga-header-cta">
+                <span class="ga-cta-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                </span>
+                Nhận Báo Giá
+            </a>
+        </div>
+    </div>
+</header>
+<section class="ga-hero">
+    <div class="ga-hero-container">
+        <div class="ga-left">
+            <h1 class="ga-title">
+                <span>DỊCH VỤ QUẢNG CÁO <br> GOOGLE ADS TRỌN GÓI</span>
+            </h1>
+            <p class="ga-desc">
+                Tiếp cận đúng khách hàng tiềm năng, tối ưu ngân sách quảng cáo và gia tăng chuyển đổi với đội ngũ chuyên gia LADIGI giàu kinh nghiệm.
+            </p>
+            <div class="ga-list">
+                <div class="ga-item">Google Partner</div>
+                <div class="ga-item">Tối ưu ROAS</div>
+                <div class="ga-item">Báo cáo minh bạch</div>
+                <div class="ga-item">Đồng hành 1-1</div>
+            </div>
+            <div class="ga-buttons">
+                <a href="#" class="ga-btn ga-btn-primary">Nhận tư vấn miễn phí</a>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+
+.ga-pain{
+padding:90px 20px;
+background:#f8fafc;
+font-family:Arial,sans-serif;
+}
+
+.ga-pain-container{
+max-width:1200px;
+margin:auto;
+}
+
+.ga-pain-h3 span{
+color:#2563eb;
+}
+
+.ga-pain-head{
+text-align:center;
+max-width:760px;
+margin:0 auto 60px;
+}
+
+.ga-pain-title{
+font-size:44px;
+font-weight:700;
+line-height:1.2;
+color:#1b1f3b;
+margin:0 0 20px;
+}
+
+.ga-pain-desc{
+font-size:18px;
+line-height:1.8;
+color:#5f6b7a;
+margin:0;
+}
+
+.ga-pain-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:28px;
+}
+
+.ga-pain-card{
+background:#fff;
+border-radius:20px;
+padding:32px;
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.ga-pain-card:hover{
+transform:translateY(-8px);
+box-shadow:0 25px 45px rgba(37,99,235,.12);
+}
+
+.ga-pain-icon{
+width:64px;
+height:64px;
+border-radius:50%;
+background:#eef5ff;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+margin-bottom:22px;
+}
+
+.ga-pain-card h3{
+margin:0 0 14px;
+font-size:22px;
+font-weight:700;
+color:#1b1f3b;
+}
+
+.ga-pain-card p{
+margin:0;
+font-size:16px;
+line-height:1.7;
+color:#6b7280;
+}
+
+@media(max-width:991px){
+
+.ga-pain-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.ga-pain-title{
+font-size:36px;
+}
+
+}
+
+@media(max-width:767px){
+
+.ga-pain{
+padding:70px 20px;
+}
+
+.ga-pain-grid{
+grid-template-columns:1fr;
+}
+
+.ga-pain-title{
+font-size:30px;
+}
+
+.ga-pain-desc{
+font-size:17px;
+}
+
+}
+
+</style>
+
+<section class="ga-pain">
+
+<div class="ga-pain-container">
+
+<div class="ga-pain-head">
+
+<h2 class="ga-pain-title">
+BẠN ĐANG GẶP NHỮNG VẤN ĐỀ NÀY KHI CHẠY GOOGLE ADS?
+</h2>
+
+<p class="ga-pain-desc">
+Rất nhiều doanh nghiệp tiêu tốn hàng chục triệu đồng mỗi tháng nhưng quảng cáo vẫn không mang lại khách hàng hoặc doanh thu như kỳ vọng.
+</p>
+
+</div>
+
+<div class="ga-pain-grid">
+
+<div class="ga-pain-card">
+
+<div class="ga-pain-icon">
+💸
+</div>
+
+<h3 class="ga-pain-h3">
+<span>Chi phí quảng cáo ngày càng cao</span>
+</h3>
+
+<p>
+Ngân sách tăng liên tục nhưng lượng khách hàng tiềm năng không tăng tương ứng, khiến chi phí chuyển đổi ngày càng đắt đỏ.
+</p>
+
+</div>
+
+<div class="ga-pain-card">
+
+<div class="ga-pain-icon">
+🎯
+</div>
+
+<h3 class="ga-pain-h3">
+<span>Lead không đúng khách hàng</span>
+</h3>
+
+<p>
+Nhiều lượt đăng ký hoặc cuộc gọi nhưng phần lớn không có nhu cầu thực sự, làm giảm hiệu quả bán hàng.
+</p>
+
+</div>
+
+<div class="ga-pain-card">
+
+<div class="ga-pain-icon">
+📉
+</div>
+
+<h3 class="ga-pain-h3">
+<span>Tỷ lệ chuyển đổi thấp</span>
+</h3>
+
+<p>
+Có nhiều lượt nhấp nhưng ít đơn hàng do chiến dịch chưa được tối ưu hoặc Landing Page chưa phù hợp.
+</p>
+
+</div>
+
+<div class="ga-pain-card">
+
+<div class="ga-pain-icon">
+⚙️
+</div>
+
+<h3 class="ga-pain-h3">
+<span>Không biết tối ưu chiến dịch</span>
+</h3>
+
+<p>
+Không có thời gian hoặc thiếu chuyên môn để phân tích dữ liệu, tối ưu từ khóa và cải thiện hiệu quả quảng cáo.
+</p>
+
+</div>
+
+<div class="ga-pain-card">
+
+<div class="ga-pain-icon">
+📊
+</div>
+
+<h3 class="ga-pain-h3">
+<span>Thiếu báo cáo minh bạch</span>
+</h3>
+
+<p>
+Không theo dõi được hiệu quả ngân sách, chỉ số chuyển đổi và kết quả thực tế của từng chiến dịch.
+</p>
+
+</div>
+
+<div class="ga-pain-card">
+
+<div class="ga-pain-icon">
+⏳
+</div>
+
+<h3 class="ga-pain-h3">
+<span>Mất nhiều thời gian thử sai</span>
+</h3>
+
+<p>
+Tự triển khai nhiều chiến dịch nhưng không đạt kết quả, vừa tốn thời gian vừa lãng phí ngân sách quảng cáo.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+</script>
+
+<style>
+
+.ga-service{
+padding:100px 20px;
+background:linear-gradient(135deg,#f7fbff 0%,#eef5ff 100%);
+font-family:Arial,sans-serif;
+}
+
+.ga-service-container{
+max-width:1200px;
+margin:auto;
+}
+
+.ga-service-head{
+text-align:center;
+max-width:760px;
+margin:0 auto 60px;
+}
+
+.ga-service-title{
+font-size:44px;
+font-weight:700;
+line-height:1.2;
+color:#1b1f3b;
+margin:0 0 20px;
+}
+
+.ga-service-title span{
+color:#2563eb;
+}
+
+.ga-service-desc{
+font-size:18px;
+line-height:1.8;
+color:#5f6b7a;
+margin:0;
+}
+
+.ga-service-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+margin-top:60px;
+}
+
+.ga-service-card{
+background:#fff;
+border:1px solid #e9eef5;
+border-radius:22px;
+padding:22px;
+box-shadow:0 18px 45px rgba(0,0,0,.06);
+transition:.35s;
+overflow:hidden;
+}
+
+.ga-service-card:hover{
+transform:translateY(-8px);
+box-shadow:0 25px 50px rgba(37,99,235,.12);
+}
+
+.ga-service-image{
+position:relative;
+margin-bottom:22px;
+}
+
+.ga-service-image img{
+width:100%;
+aspect-ratio:16/10;
+object-fit:cover;
+display:block;
+border-radius:16px;
+}
+
+.ga-service-icon{
+position:absolute;
+left:18px;
+bottom:-22px;
+width:54px;
+height:54px;
+background:#eef5ff;
+border:4px solid #fff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+box-shadow:0 8px 20px rgba(0,0,0,.08);
+}
+
+.ga-service-body{
+padding-top:16px;
+}
+
+.ga-service-body h3{
+margin:0 0 14px;
+font-size:22px;
+font-weight:700;
+color:#1b1f3b;
+}
+
+.ga-service-body p{
+margin:0;
+font-size:16px;
+line-height:1.7;
+color:#6b7280;
+}
+
+.ga-service-link{
+display:inline-flex;
+align-items:center;
+margin-top:22px;
+font-size:15px;
+font-weight:700;
+color:#2563eb;
+text-decoration:none;
+}
+
+.ga-service-link:hover{
+text-decoration:underline;
+}
+
+@media(max-width:991px){
+
+.ga-service-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.ga-service-title{
+font-size:36px;
+}
+
+}
+
+@media(max-width:767px){
+
+.ga-service{
+padding:70px 20px;
+}
+
+.ga-service-grid{
+grid-template-columns:1fr;
+}
+
+.ga-service-title{
+font-size:30px;
+}
+
+.ga-service-desc{
+font-size:17px;
+}
+
+}
+
+</style>
+
+<section class="ga-service">
+
+<div class="ga-service-container">
+
+<div class="ga-service-head">
+
+<h2 class="ga-service-title">
+GIẢI PHÁP GOOGLE ADS TOÀN DIỆN CHO DOANH NGHIỆP
+</h2>
+
+<p class="ga-service-desc">
+Lựa chọn đúng hình thức quảng cáo sẽ giúp doanh nghiệp tiếp cận khách hàng mục tiêu hiệu quả hơn, tối ưu ngân sách và gia tăng tỷ lệ chuyển đổi.
+</p>
+
+</div>
+
+<div class="ga-service-grid">
+
+<div class="ga-service-card">
+
+<div class="ga-service-image">
+<img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800" alt="">
+<div class="ga-service-icon">🔍</div>
+</div>
+
+<div class="ga-service-body">
+<h3>Google Search Ads</h3>
+<p>Hiển thị quảng cáo trên kết quả tìm kiếm Google khi khách hàng có nhu cầu mua hàng hoặc sử dụng dịch vụ.</p>
+<a href="#" class="ga-service-link">Tìm hiểu thêm →</a>
+</div>
+
+</div>
+
+<div class="ga-service-card">
+
+<div class="ga-service-image">
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800" alt="">
+<div class="ga-service-icon">🖥️</div>
+</div>
+
+<div class="ga-service-body">
+<h3>Google Display Ads</h3>
+<p>Tiếp cận khách hàng bằng banner trực quan trên hàng triệu website thuộc mạng hiển thị Google.</p>
+<a href="#" class="ga-service-link">Tìm hiểu thêm →</a>
+</div>
+
+</div>
+
+<div class="ga-service-card">
+
+<div class="ga-service-image">
+<img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=800" alt="">
+<div class="ga-service-icon">🛒</div>
+</div>
+
+<div class="ga-service-body">
+<h3>Google Shopping Ads</h3>
+<p>Hiển thị hình ảnh, giá bán và thông tin sản phẩm trực tiếp trên Google giúp tăng tỷ lệ mua hàng.</p>
+<a href="#" class="ga-service-link">Tìm hiểu thêm →</a>
+</div>
+
+</div>
+
+<div class="ga-service-card">
+
+<div class="ga-service-image">
+<img src="https://images.unsplash.com/photo-1492619375914-88005aa9e8fb?w=800" alt="">
+<div class="ga-service-icon">▶️</div>
+</div>
+
+<div class="ga-service-body">
+<h3>YouTube Ads</h3>
+<p>Quảng bá thương hiệu bằng video đến đúng nhóm khách hàng trên nền tảng YouTube.</p>
+<a href="#" class="ga-service-link">Tìm hiểu thêm →</a>
+</div>
+
+</div>
+
+<div class="ga-service-card">
+
+<div class="ga-service-image">
+<img src="https://images.unsplash.com/photo-1556155092-490a1ba16284?w=800" alt="">
+<div class="ga-service-icon">⚡</div>
+</div>
+
+<div class="ga-service-body">
+<h3>Performance Max</h3>
+<p>Sử dụng AI của Google để phân phối quảng cáo trên Search, YouTube, Gmail, Maps và Display.</p>
+<a href="#" class="ga-service-link">Tìm hiểu thêm →</a>
+</div>
+
+</div>
+
+<div class="ga-service-card">
+
+<div class="ga-service-image">
+<img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800" alt="">
+<div class="ga-service-icon">🎯</div>
+</div>
+
+<div class="ga-service-body">
+<h3>Remarketing Ads</h3>
+<p>Tiếp cận lại những khách hàng đã truy cập website nhằm tăng tỷ lệ chuyển đổi và doanh số.</p>
+<a href="#" class="ga-service-link">Tìm hiểu thêm →</a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+</script>
+
+<style>
+
+.ga-process{
+padding:100px 20px;
+background:#f8fafc;
+font-family:Arial,sans-serif;
+}
+
+.ga-process-container{
+max-width:1200px;
+margin:auto;
+}
+
+.ga-process-head{
+text-align:center;
+max-width:760px;
+margin:0 auto 70px;
+}
+
+.ga-process-title{
+font-size:44px;
+font-weight:700;
+line-height:1.2;
+color:#1b1f3b;
+margin:0 0 20px;
+}
+
+.ga-process-title span{
+color:#2563eb;
+}
+
+.ga-process-desc{
+font-size:18px;
+line-height:1.8;
+color:#5f6b7a;
+margin:0;
+}
+
+.ga-process-list{
+display:flex;
+justify-content:space-between;
+position:relative;
+margin-bottom:80px;
+}
+
+.ga-process-list:before{
+content:"";
+position:absolute;
+left:8%;
+right:8%;
+top:28px;
+height:4px;
+background:#dbe8ff;
+z-index:0;
+}
+
+.ga-step{
+position:relative;
+z-index:2;
+width:200px;
+text-align:center;
+}
+
+.ga-step-number{
+width:56px;
+height:56px;
+background:#2563eb;
+color:#fff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+font-weight:700;
+margin:auto;
+box-shadow:0 12px 25px rgba(37,99,235,.25);
+}
+
+.ga-step-card{
+margin-top:24px;
+background:#fff;
+padding:28px 22px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,.06);
+transition:.35s;
+}
+
+.ga-step-card:hover{
+transform:translateY(-8px);
+box-shadow:0 25px 50px rgba(37,99,235,.12);
+}
+
+.ga-step-icon{
+width:60px;
+height:60px;
+margin:auto auto 18px;
+background:#eef5ff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+}
+
+.ga-step-card h3{
+margin:0 0 12px;
+font-size:20px;
+color:#1b1f3b;
+}
+
+.ga-step-card p{
+margin:0;
+font-size:15px;
+line-height:1.7;
+color:#6b7280;
+}
+
+.ga-process-banner{
+overflow:hidden;
+border-radius:24px;
+box-shadow:0 20px 50px rgba(0,0,0,.08);
+}
+
+.ga-process-banner img{
+width:100%;
+display:block;
+aspect-ratio:16/7;
+object-fit:cover;
+}
+
+@media(max-width:991px){
+
+.ga-process-list{
+flex-direction:column;
+gap:40px;
+align-items:center;
+}
+
+.ga-process-list:before{
+left:50%;
+top:30px;
+width:4px;
+height:calc(100% - 60px);
+transform:translateX(-50%);
+}
+
+.ga-step{
+width:100%;
+max-width:320px;
+}
+
+.ga-process-title{
+font-size:36px;
+}
+
+}
+
+@media(max-width:767px){
+
+.ga-process{
+padding:70px 20px;
+}
+
+.ga-process-title{
+font-size:30px;
+}
+
+.ga-process-desc{
+font-size:17px;
+}
+
+}
+
+</style>
+
+<section class="ga-process">
+
+<div class="ga-process-container">
+
+<div class="ga-process-head">
+
+<h2 class="ga-process-title">
+QUY TRÌNH TRIỂN KHAI CHUYÊN NGHIỆP
+</h2>
+
+<p class="ga-process-desc">
+Mỗi chiến dịch Google Ads đều được xây dựng theo quy trình chuẩn nhằm đảm bảo hiệu quả, tối ưu ngân sách và dễ dàng theo dõi trong suốt quá trình triển khai.
+</p>
+
+</div>
+
+<div class="ga-process-list">
+
+<div class="ga-step">
+
+<div class="ga-step-number">01</div>
+
+<div class="ga-step-card">
+
+<div class="ga-step-icon">⚙️</div>
+
+<h3>Cài đặt tài khoản</h3>
+
+<p>Thiết lập tài khoản Google Ads, GA4, Google Tag Manager và các công cụ đo lường.</p>
+
+</div>
+
+</div>
+
+<div class="ga-step">
+
+<div class="ga-step-number">02</div>
+
+<div class="ga-step-card">
+
+<div class="ga-step-icon">🔍</div>
+
+<h3>Nghiên cứu</h3>
+
+<p>Phân tích thị trường, đối thủ, từ khóa và hành vi khách hàng trước khi triển khai.</p>
+
+</div>
+
+</div>
+
+<div class="ga-step">
+
+<div class="ga-step-number">03</div>
+
+<div class="ga-step-card">
+
+<div class="ga-step-icon">🚀</div>
+
+<h3>Thiết lập chiến dịch</h3>
+
+<p>Xây dựng cấu trúc chiến dịch, nhóm quảng cáo, nội dung và chiến lược giá thầu.</p>
+
+</div>
+
+</div>
+
+<div class="ga-step">
+
+<div class="ga-step-number">04</div>
+
+<div class="ga-step-card">
+
+<div class="ga-step-icon">📈</div>
+
+<h3>Theo dõi & tối ưu</h3>
+
+<p>Liên tục phân tích dữ liệu, tối ưu từ khóa, quảng cáo và ngân sách để tăng hiệu quả.</p>
+
+</div>
+
+</div>
+
+<div class="ga-step">
+
+<div class="ga-step-number">05</div>
+
+<div class="ga-step-card">
+
+<div class="ga-step-icon">📊</div>
+
+<h3>Báo cáo định kỳ</h3>
+
+<p>Cung cấp báo cáo minh bạch cùng đề xuất cải thiện nhằm duy trì tăng trưởng lâu dài.</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="ga-process-banner">
+
+<img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=1600" alt="Đội ngũ triển khai Google Ads">
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+</script>
+
+<style>
+
+.ga-why{
+padding:100px 20px;
+background:#ffffff;
+font-family:Arial,sans-serif;
+}
+
+.ga-why-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+gap:70px;
+}
+
+.ga-why-left{
+flex:1.2;
+}
+
+.ga-why-right{
+flex:0.8;
+position:relative;
+}
+
+.ga-why-title{
+font-size:44px;
+font-weight:700;
+line-height:1.2;
+color:#1b1f3b;
+margin:0 0 20px;
+}
+
+.ga-why-title span{
+color:#2563eb;
+}
+
+.ga-why-desc{
+font-size:18px;
+line-height:1.8;
+color:#5f6b7a;
+margin-bottom:40px;
+}
+
+.ga-why-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.ga-why-card{
+background:#fff;
+border:1px solid #e9eef5;
+border-radius:18px;
+padding:24px;
+transition:.35s;
+box-shadow:0 12px 35px rgba(0,0,0,.05);
+}
+
+.ga-why-card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 45px rgba(37,99,235,.12);
+}
+
+.ga-why-icon{
+width:56px;
+height:56px;
+background:#eef5ff;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:24px;
+margin-bottom:18px;
+}
+
+.ga-why-card h3{
+margin:0 0 12px;
+font-size:20px;
+font-weight:700;
+color:#1b1f3b;
+}
+
+.ga-why-card p{
+margin:0;
+font-size:15px;
+line-height:1.7;
+color:#6b7280;
+}
+
+.ga-why-image{
+border-radius:24px;
+overflow:hidden;
+box-shadow:0 25px 60px rgba(0,0,0,.12);
+}
+
+.ga-why-image img{
+width:100%;
+aspect-ratio:4/5;
+display:block;
+object-fit:cover;
+}
+
+.ga-floating{
+position:absolute;
+background:#fff;
+padding:18px 22px;
+border-radius:18px;
+box-shadow:0 18px 45px rgba(0,0,0,.12);
+}
+
+.ga-floating-top{
+top:30px;
+right:-20px;
+}
+
+.ga-floating-bottom{
+left:-20px;
+bottom:30px;
+}
+
+.ga-floating strong{
+display:block;
+font-size:28px;
+color:#2563eb;
+margin-bottom:6px;
+}
+
+.ga-floating span{
+font-size:14px;
+color:#6b7280;
+}
+
+@media(max-width:991px){
+
+.ga-why-container{
+flex-direction:column;
+}
+
+.ga-why-right{
+order:-1;
+max-width:520px;
+}
+
+.ga-why-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.ga-why-title{
+font-size:36px;
+text-align:center;
+}
+
+.ga-why-desc{
+text-align:center;
+}
+
+}
+
+@media(max-width:767px){
+
+.ga-why{
+padding:70px 20px;
+}
+
+.ga-why-grid{
+grid-template-columns:1fr;
+}
+
+.ga-why-title{
+font-size:30px;
+}
+
+.ga-floating{
+display:none;
+}
+
+}
+
+</style>
+
+<section class="ga-why">
+
+<div class="ga-why-container">
+
+<div class="ga-why-left">
+
+<h2 class="ga-why-title">
+LÝ DO NÊN CHỌN DỊCH VỤ GOOGLE ADS CỦA <span>LADIGI AGENCY</span>
+</h2>
+
+<div class="ga-why-grid">
+
+<div class="ga-why-card">
+<div class="ga-why-icon">🎓</div>
+<h3>Chuyên gia Google Ads</h3>
+<p>Đội ngũ giàu kinh nghiệm triển khai nhiều lĩnh vực với chiến lược phù hợp từng doanh nghiệp.</p>
+</div>
+
+<div class="ga-why-card">
+<div class="ga-why-icon">📊</div>
+<h3>Tối ưu theo dữ liệu</h3>
+<p>Mọi quyết định đều dựa trên dữ liệu thực tế nhằm cải thiện hiệu quả và giảm chi phí quảng cáo.</p>
+</div>
+
+<div class="ga-why-card">
+<div class="ga-why-icon">📈</div>
+<h3>Báo cáo minh bạch</h3>
+<p>Cập nhật hiệu quả chiến dịch thường xuyên với số liệu rõ ràng và dễ theo dõi.</p>
+</div>
+
+<div class="ga-why-card">
+<div class="ga-why-icon">🚀</div>
+<h3>Tăng trưởng bền vững</h3>
+<p>Tập trung vào hiệu quả lâu dài thay vì chỉ tăng lượt nhấp hay lưu lượng truy cập ngắn hạn.</p>
+</div>
+
+</div>
+
+</div>
+
+<div class="ga-why-right">
+
+<div class="ga-why-image">
+<img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=900" alt="Đội ngũ LADIGI AGENCY">
+</div>
+
+<div class="ga-floating ga-floating-bottom">
+<strong>8+ Năm</strong>
+<span>Kinh nghiệm Digital Marketing</span>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+</script>
+
+<style>
+
+.ga-pricing{
+padding:100px 20px;
+background:#f7fafd;
+font-family:Arial,sans-serif;
+}
+
+.ga-pricing-container{
+max-width:1200px;
+margin:auto;
+}
+
+.ga-pricing-head{
+text-align:center;
+max-width:760px;
+margin:auto auto 70px;
+}
+
+.ga-pricing-head h2{
+font-size:44px;
+font-weight:700;
+color:#1b1f3b;
+margin-bottom:18px;
+line-height:1.2;
+}
+
+.ga-pricing-head h2 span{
+color:#2563eb;
+}
+
+.ga-pricing-head p{
+font-size:18px;
+line-height:1.8;
+color:#6b7280;
+}
+
+.ga-pricing-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:28px;
+align-items:stretch;
+}
+
+.ga-price-card{
+background:#fff;
+border:1px solid #e5e7eb;
+border-radius:24px;
+padding:38px;
+position:relative;
+transition:.35s;
+box-shadow:0 15px 40px rgba(0,0,0,.05);
+display:flex;
+flex-direction:column;
+}
+
+.ga-price-card:hover{
+transform:translateY(-10px);
+box-shadow:0 25px 60px rgba(0,0,0,.12);
+}
+
+.ga-price-card.featured{
+border:2px solid #2563eb;
+transform:scale(1.04);
+}
+
+.ga-price-card.featured:hover{
+transform:scale(1.04) translateY(-10px);
+}
+
+.ga-badge{
+position:absolute;
+top:-15px;
+left:50%;
+transform:translateX(-50%);
+background:#2563eb;
+color:#fff;
+padding:8px 18px;
+font-size:14px;
+font-weight:700;
+border-radius:999px;
+}
+
+.ga-package{
+font-size:28px;
+font-weight:700;
+color:#1b1f3b;
+margin-bottom:12px;
+}
+
+.ga-price{
+font-size:37px;
+font-weight:800;
+color:#2563eb;
+line-height:1;
+margin-bottom:10px;
+text-align:center;
+}
+
+.ga-price small{
+font-size:18px;
+font-weight:500;
+color:#6b7280;
+}
+
+.ga-note{
+font-size:15px;
+color:#6b7280;
+margin-bottom:30px;
+}
+
+.ga-divider{
+height:1px;
+background:#edf0f4;
+margin-bottom:28px;
+}
+
+.ga-feature{
+display:flex;
+align-items:flex-start;
+gap:12px;
+margin-bottom:16px;
+font-size:16px;
+line-height:1.7;
+color:#4b5563;
+}
+
+.ga-feature span{
+font-size:18px;
+color:#16a34a;
+margin-top:2px;
+}
+
+.ga-btn{
+    margin-top:auto;
+    width:100%;
+    height:58px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#2563eb;
+    color:#fff;
+
+    text-decoration:none;
+    font-size:18px;
+    font-weight:700;
+
+    border-radius:14px;
+
+    transition:.3s;
+
+    box-sizing:border-box;
+}
+
+.ga-btn:hover{
+    background:#1d4ed8;
+}
+
+.ga-btn:hover{
+background:#1d4ed8;
+}
+
+@media(max-width:991px){
+
+.ga-pricing-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.ga-price-card.featured{
+transform:none;
+}
+
+.ga-price-card.featured:hover{
+transform:translateY(-10px);
+}
+
+}
+
+@media(max-width:767px){
+
+.ga-pricing{
+padding:70px 20px;
+}
+
+.ga-pricing-grid{
+grid-template-columns:1fr;
+}
+
+.ga-pricing-head h2{
+font-size:34px;
+}
+
+.ga-price{
+font-size:35px;
+}
+
+}
+.ga-feature-list{
+    flex:1;
+}
+
+</style>
+
+<section class="ga-pricing">
+
+<div class="ga-pricing-container">
+
+<div class="ga-pricing-head">
+
+<h2>
+
+BẮT ĐẦU VỚI GÓI DỊCH VỤ PHÙ HỢP CHO DOANH NGHIỆP CỦA BẠN
+
+</h2>
+
+<p>
+
+Lựa chọn gói dịch vụ phù hợp với quy mô doanh nghiệp. Mọi gói đều được triển khai bởi đội ngũ chuyên gia LADIGI và có báo cáo minh bạch.
+
+</p>
+
+</div>
+
+<div class="ga-pricing-grid">
+
+<div class="ga-price-card">
+
+<h3 class="ga-package">Gói
+</h3>
+
+<div class="ga-price">
+KHỞI ĐỘNG
+</div>
+
+<p class="ga-note">
+Phù hợp với hộ kinh doanh, local brand mới bắt đầu tiếp cận Google Ads.
+</p>
+
+<div class="ga-divider"></div>
+
+<div class="ga-feature-list">
+<div class="ga-feature"><span>✔</span>Thiết lập tài khoản Google Ads</div>
+
+<div class="ga-feature"><span>✔</span>Nghiên cứu từ khóa cốt lõi</div>
+
+<div class="ga-feature"><span>✔</span>Triển khai chiến dịch Tìm kiếm hoặc Hiển thị cơ bản</div>
+
+<div class="ga-feature"><span>✔</span>Theo dõi và tối ưu </div>
+
+<div class="ga-feature"><span>✔</span>Báo cáo hiệu suất hàng tháng</div>
+</div>
+<a href="#" class="ga-btn">
+Nhận báo giá
+</a>
+
+</div>
+
+<div class="ga-price-card featured">
+
+<div class="ga-badge">
+Khuyến nghị
+</div>
+
+<h3 class="ga-package">Gói</h3>
+
+<div class="ga-price">
+TĂNG TRƯỞNG
+</div>
+
+<p class="ga-note">
+Giải pháp bứt phá doanh số toàn diện dành cho doanh nghiệp muốn tăng trưởng mạnh.
+</p>
+
+<div class="ga-divider"></div>
+
+<div class="ga-feature-list">
+
+<div class="ga-feature"><span>✔</span>Chiến lược Google Ads toàn diện</div>
+
+<div class="ga-feature"><span>✔</span>Tối ưu chiến dịch thông minh</div>
+
+<div class="ga-feature"><span>✔</span>Cài đặt đo lường nâng cao</div>
+
+<div class="ga-feature"><span>✔</span>Dashboard theo dõi thời gian thực</div>
+
+<div class="ga-feature"><span>✔</span>Báo cáo định kỳ</div>
+
+<div class="ga-feature"><span>✔</span>Đề xuất tối ưu chi phí trên mỗi chuyển đổi</div>
+
+</div>
+<a href="#" class="ga-btn">
+Nhận báo giá
+</a>
+
+</div>
+
+<div class="ga-price-card">
+
+<h3 class="ga-package">Gói</h3>
+
+<div class="ga-price">
+TÙY CHỈNH
+</div>
+
+<p class="ga-note">
+Chiến lược đa nền tảng tối ưu sâu chỉ số ROAS và cam kết đồng hành dài hạn.
+</p>
+
+<div class="ga-divider"></div>
+
+<div class="ga-feature-list">
+<div class="ga-feature"><span>✔</span>Chiến lược Google Ads tổng thể, đa nền tảng</div>
+
+<div class="ga-feature"><span>✔</span>Tối ưu hóa tệp dữ liệu khách hàng kết hợp AI Smart Bidding nâng cao</div>
+
+<div class="ga-feature"><span>✔</span>Phân tích dữ liệu chuyên sâu</div>
+
+<div class="ga-feature"><span>✔</span>A/B Testing liên tục để tối đa hóa ROAS</div>
+
+<div class="ga-feature"><span>✔</span>Đội ngũ chuyên gia đồng hành</div>
+
+<div class="ga-feature"><span>✔</span>Hỗ trợ theo SLA</div>
+</div>
+<a href="#" class="ga-btn">
+Nhận báo giá
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+</script>
+
+<style>
+
+.ga-review{
+padding:100px 20px;
+background:#f7fafd;
+font-family:Arial,sans-serif;
+}
+
+.ga-review-container{
+max-width:1200px;
+margin:auto;
+}
+
+.ga-review-head{
+text-align:center;
+max-width:760px;
+margin:auto;
+margin-bottom:60px;
+}
+
+.ga-review-title{
+font-size:44px;
+font-weight:700;
+line-height:1.2;
+color:#1b1f3b;
+margin-bottom:20px;
+}
+
+.ga-review-title span{
+color:#2563eb;
+}
+
+.ga-review-desc{
+font-size:18px;
+line-height:1.8;
+color:#5f6b7a;
+}
+
+.ga-video{
+position:relative;
+border-radius:24px;
+overflow:hidden;
+margin-bottom:60px;
+box-shadow:0 25px 60px rgba(0,0,0,.08);
+cursor:pointer;
+}
+
+.ga-video img{
+width:100%;
+display:block;
+aspect-ratio:16/9;
+object-fit:cover;
+transition:.4s;
+}
+
+.ga-video:hover img{
+transform:scale(1.04);
+}
+
+.ga-play{
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+width:90px;
+height:90px;
+background:#2563eb;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+color:#fff;
+font-size:34px;
+box-shadow:0 15px 35px rgba(37,99,235,.35);
+}
+
+.ga-slider{
+overflow:hidden;
+position:relative;
+}
+
+.ga-track{
+    display:flex;
+    gap:24px;
+    transition:.45s;
+}
+
+.ga-review-card{
+    flex:0 0 calc((100% - 48px) / 3);
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+    box-sizing:border-box;
+}
+
+.ga-user{
+display:flex;
+align-items:center;
+margin-bottom:20px;
+}
+
+.ga-user img{
+width:72px;
+height:72px;
+border-radius:50%;
+object-fit:cover;
+margin-right:18px;
+}
+
+.ga-user h4{
+margin:0;
+font-size:20px;
+color:#1b1f3b;
+}
+
+.ga-user span{
+display:block;
+font-size:15px;
+margin-top:4px;
+color:#6b7280;
+}
+
+.ga-star{
+margin:20px 0;
+font-size:20px;
+color:#fbbf24;
+letter-spacing:2px;
+}
+
+.ga-review-card p{
+font-size:16px;
+line-height:1.8;
+color:#6b7280;
+margin:0;
+}
+
+.ga-nav{
+display:flex;
+justify-content:center;
+margin-top:35px;
+gap:16px;
+}
+
+.ga-nav-btn{
+width:48px;
+height:48px;
+border:none;
+background:#2563eb;
+color:#fff;
+font-size:22px;
+border-radius:50%;
+cursor:pointer;
+transition:.3s;
+}
+
+.ga-nav-btn:hover{
+background:#174db8;
+}
+
+@media(max-width:991px){
+
+.ga-review-card{
+flex:0 0 calc(50% - 12px);
+}
+
+.ga-review-title{
+font-size:36px;
+}
+
+}
+
+@media(max-width:767px){
+
+.ga-review-card{
+flex:0 0 100%;
+}
+
+.ga-review{
+padding:70px 20px;
+}
+
+.ga-review-title{
+font-size:30px;
+}
+
+}
+
+</style>
+
+<section class="ga-review">
+
+<div class="ga-review-container">
+
+<div class="ga-review-head">
+
+<h2 class="ga-review-title">
+
+KHÁCH HÀNG NÓI GÌ VỀ DỊCH VỤ GOOGLE ADS CỦA <span>LADIGI AGENCY</span>
+
+</h2>
+
+<p class="ga-review-desc">
+
+Những phản hồi thực tế từ doanh nghiệp đã triển khai Google Ads cùng LADIGI AGENCY.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="ga-slider">
+
+<div class="ga-track" id="gaTrack">
+
+<div class="ga-review-card">
+
+<div class="ga-user">
+
+<img src="https://i.pravatar.cc/150?img=12">
+
+<div>
+
+<h4>Nguyễn Minh Anh</h4>
+
+<span>Công ty Nội Thất ABC</span>
+
+</div>
+
+</div>
+
+<div class="ga-star">★★★★★</div>
+
+<p>
+
+Sau 3 tháng triển khai, chi phí mỗi khách hàng giảm gần 40% và lượng đơn hàng tăng ổn định.
+
+</p>
+
+</div>
+<div class="ga-review-card">
+    <div class="ga-user">
+        <img src="https://i.pravatar.cc/150?img=30">
+        <div>
+            <h4>Phạm Gia Bảo</h4>
+            <span>Founder Bảo Minh Auto</span>
+        </div>
+    </div>
+    <div class="ga-star">★★★★★</div>
+    <p>
+        Google Ads mang về lượng khách chất lượng hơn kỳ vọng. Doanh thu tăng đều qua từng tháng.
+    </p>
+</div>
+
+<div class="ga-review-card">
+    <div class="ga-user">
+        <img src="https://i.pravatar.cc/150?img=36">
+        <div>
+            <h4>Đỗ Thanh Tùng</h4>
+            <span>Giám đốc Nội thất Tùng Phát</span>
+        </div>
+    </div>
+    <div class="ga-star">★★★★★</div>
+    <p>
+        LADIGI AGENCY tối ưu rất sát ngân sách, giúp chúng tôi giảm đáng kể chi phí cho mỗi khách hàng tiềm năng.
+    </p>
+</div>
+
+<div class="ga-review-card">
+    <div class="ga-user">
+        <img src="https://i.pravatar.cc/150?img=45">
+        <div>
+            <h4>Hoàng Ngọc Mai</h4>
+            <span>CEO Mai Beauty Spa</span>
+        </div>
+    </div>
+    <div class="ga-star">★★★★★</div>
+    <p>
+        Đội ngũ hỗ trợ nhiệt tình, luôn theo sát chiến dịch và đề xuất hướng tối ưu để tăng hiệu quả quảng cáo.
+    </p>
+</div>
+
+<div class="ga-review-card">
+
+<div class="ga-user">
+
+<img src="https://i.pravatar.cc/150?img=18">
+
+<div>
+
+<h4>Lê Quốc Huy</h4>
+
+<span>CEO Huy Phát</span>
+
+</div>
+
+</div>
+
+<div class="ga-star">★★★★★</div>
+
+<p>
+
+Đội ngũ hỗ trợ rất nhanh, báo cáo minh bạch và luôn chủ động đề xuất hướng tối ưu.
+
+</p>
+
+</div>
+
+<div class="ga-review-card">
+
+<div class="ga-user">
+
+<img src="https://i.pravatar.cc/150?img=22">
+
+<div>
+
+<h4>Trần Thu Hà</h4>
+
+<span>Beauty Clinic</span>
+
+</div>
+
+</div>
+
+<div class="ga-star">★★★★★</div>
+
+<p>
+
+Lượng khách từ Google Ads tăng rõ rệt chỉ sau vài tuần. Chiến dịch được tối ưu liên tục.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="ga-nav">
+
+<button class="ga-nav-btn" id="gaPrev">‹</button>
+
+<button class="ga-nav-btn" id="gaNext">›</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+const track = document.getElementById("gaTrack");
+const cards = document.querySelectorAll(".ga-review-card");
+const next = document.getElementById("gaNext");
+const prev = document.getElementById("gaPrev");
+
+let index = 0;
+
+function visibleCards() {
+    if (window.innerWidth < 768) return 1;
+    if (window.innerWidth < 992) return 2;
+    return 3;
+}
+
+function cardWidth() {
+    return cards[0].offsetWidth + 24; // 24 = gap
+}
+
+function updateSlider() {
+    track.style.transform =
+        `translateX(-${index * cardWidth()}px)`;
+}
+
+function maxIndex() {
+    return cards.length - visibleCards();
+}
+
+next.onclick = () => {
+    index++;
+
+    if(index > maxIndex()){
+        index = 0;
+    }
+
+    updateSlider();
+}
+
+prev.onclick = () => {
+    index--;
+
+    if(index < 0){
+        index = maxIndex();
+    }
+
+    updateSlider();
+}
+
+window.addEventListener("resize", updateSlider);
+
+// autoplay
+let auto = setInterval(()=>{
+    next.click();
+},4000);
+
+// hover dừng
+document.querySelector(".ga-slider").addEventListener("mouseenter",()=>{
+    clearInterval(auto);
+});
+
+document.querySelector(".ga-slider").addEventListener("mouseleave",()=>{
+    auto = setInterval(()=>{
+        next.click();
+    },4000);
+});
+</script>
+
+<style>
+
+.ga-faq{
+padding:100px 20px;
+background:#f8fbff;
+font-family:Arial,sans-serif;
+}
+
+.ga-faq-container{
+max-width:1200px;
+margin:auto;
+}
+
+.ga-faq-head{
+text-align:center;
+max-width:760px;
+margin:auto auto 70px;
+}
+
+.ga-faq-head h2{
+font-size:44px;
+font-weight:700;
+color:#1b1f3b;
+margin-bottom:18px;
+}
+
+.ga-faq-head h2 span{
+color:#2563eb;
+}
+
+.ga-faq-head p{
+font-size:18px;
+line-height:1.8;
+color:#6b7280;
+}
+
+.ga-faq-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
+
+.ga-faq-card{
+
+background:#fff;
+
+border-radius:24px;
+
+padding:36px;
+
+box-shadow:0 18px 50px rgba(0,0,0,.05);
+
+}
+
+.ga-faq-group{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+margin-bottom:30px;
+
+}
+
+.ga-faq-icon{
+
+width:48px;
+
+height:48px;
+
+border-radius:14px;
+
+background:#2563eb;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:22px;
+
+color:#fff;
+
+}
+
+.ga-faq-group h3{
+
+font-size:24px;
+
+margin:0;
+
+color:#1b1f3b;
+
+}
+
+.ga-faq-item{
+
+border-top:1px solid #edf0f5;
+
+}
+
+.ga-faq-item:first-child{
+
+border:none;
+
+}
+
+.ga-faq-question{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+cursor:pointer;
+
+padding:22px 0;
+
+font-size:17px;
+
+font-weight:600;
+
+color:#1f2937;
+
+}
+
+.ga-faq-arrow{
+
+transition:.3s;
+
+font-size:22px;
+
+color:#2563eb;
+
+}
+
+.ga-faq-answer{
+
+max-height:0;
+
+overflow:hidden;
+
+transition:max-height .35s ease;
+
+}
+
+.ga-faq-answer p{
+
+padding-bottom:22px;
+
+font-size:16px;
+
+line-height:1.8;
+
+color:#6b7280;
+
+}
+
+.ga-faq-item.active .ga-faq-answer{
+
+max-height:300px;
+
+}
+
+.ga-faq-item.active .ga-faq-arrow{
+
+transform:rotate(180deg);
+
+}
+
+@media(max-width:991px){
+
+.ga-faq-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:767px){
+
+.ga-faq{
+
+padding:70px 20px;
+
+}
+
+.ga-faq-head h2{
+
+font-size:34px;
+
+}
+
+}
+
+</style>
+<section class="ga-faq">
+
+    <div class="ga-faq-container">
+
+        <div class="ga-faq-head">
+
+            <h2>
+                NHỮNG CÂU HỎI THƯỜNG GẶP
+            </h2>
+
+            <p>
+                Giải đáp các thắc mắc phổ biến về chi phí, quy trình triển khai và cam kết dịch vụ
+                Google Ads tại LADIGI AGENCY.
+            </p>
+
+        </div>
+
+        <div class="ga-faq-grid">
+
+            <!--=========================
+                NHÓM 1
+            ==========================-->
+
+            <div class="ga-faq-card">
+
+                <div class="ga-faq-group">
+
+                    <div class="ga-faq-icon">
+                        💰
+                    </div>
+
+                    <h3>
+                        Chi phí & Ngân sách
+                    </h3>
+
+                </div>
+
+                <div class="ga-faq-item active">
+
+                    <div class="ga-faq-question">
+
+                        <span>
+                            Phí dịch vụ của Agency được tính thế nào?
+                        </span>
+
+                        <div class="ga-faq-arrow">
+                            ▼
+                        </div>
+
+                    </div>
+
+                    <div class="ga-faq-answer">
+
+                        <p>
+                            LADIGI áp dụng hai hình thức linh hoạt:
+                            <strong>thu phí quản lý cố định theo tháng (Fix Fee)</strong>
+                            hoặc
+                            <strong>tính theo tỷ lệ (%) trên tổng ngân sách quảng cáo.</strong>
+                            Chúng tôi sẽ tư vấn phương án phù hợp nhất theo quy mô doanh nghiệp.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="ga-faq-item">
+
+                    <div class="ga-faq-question">
+
+                        <span>
+                            Tiền chạy quảng cáo sẽ nạp cho ai?
+                        </span>
+
+                        <div class="ga-faq-arrow">
+                            ▼
+                        </div>
+
+                    </div>
+
+                    <div class="ga-faq-answer">
+
+                        <p>
+                            Toàn bộ ngân sách quảng cáo được doanh nghiệp thanh toán trực tiếp cho
+                            Google thông qua thẻ ngân hàng của mình.
+                            Bạn hoàn toàn kiểm soát tài khoản và hạn mức chi tiêu mỗi ngày.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="ga-faq-item">
+
+                    <div class="ga-faq-question">
+
+                        <span>
+                            Có phát sinh thêm chi phí nào khác không?
+                        </span>
+
+                        <div class="ga-faq-arrow">
+                            ▼
+                        </div>
+
+                    </div>
+
+                    <div class="ga-faq-answer">
+
+                        <p>
+                            Không có chi phí ẩn.
+                            Trong một số trường hợp Website hoặc Landing Page chưa tối ưu,
+                            chúng tôi sẽ tư vấn nâng cấp để giúp quảng cáo đạt hiệu quả chuyển đổi tốt hơn.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--=========================
+                NHÓM 2
+            ==========================-->
+
+            <div class="ga-faq-card">
+
+                <div class="ga-faq-group">
+
+                    <div class="ga-faq-icon">
+                        🚀
+                    </div>
+
+                    <h3>
+                        Quy trình & Cam kết
+                    </h3>
+
+                </div>
+
+                <div class="ga-faq-item active">
+
+                    <div class="ga-faq-question">
+
+                        <span>
+                            Chạy bao lâu thì có kết quả?
+                        </span>
+
+                        <div class="ga-faq-arrow">
+                            ▼
+                        </div>
+
+                    </div>
+
+                    <div class="ga-faq-answer">
+
+                        <p>
+                            Quảng cáo có thể bắt đầu hiển thị ngay sau khi được Google phê duyệt.
+                            Tuy nhiên, để hệ thống AI và đội ngũ tối ưu hiệu quả,
+                            chiến dịch thường cần khoảng
+                            <strong>2–4 tuần</strong>
+                            để thu thập dữ liệu và tối ưu chuyển đổi.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="ga-faq-item">
+
+                    <div class="ga-faq-question">
+
+                        <span>
+                            Agency có cam kết doanh số không?
+                        </span>
+
+                        <div class="ga-faq-arrow">
+                            ▼
+                        </div>
+
+                    </div>
+
+                    <div class="ga-faq-answer">
+
+                        <p>
+                            LADIGI cam kết tối ưu kỹ thuật quảng cáo,
+                            đúng tệp khách hàng,
+                            giảm CPC/CPA và tăng tỷ lệ chuyển đổi.
+                            Doanh số cuối cùng còn phụ thuộc vào sản phẩm,
+                            giá bán và quy trình tư vấn của doanh nghiệp.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="ga-faq-item">
+
+                    <div class="ga-faq-question">
+
+                        <span>
+                            Quy trình báo cáo kết quả như thế nào?
+                        </span>
+
+                        <div class="ga-faq-arrow">
+                            ▼
+                        </div>
+
+                    </div>
+
+                    <div class="ga-faq-answer">
+
+                        <p>
+                            Bạn sẽ được cấp Dashboard Google Looker Studio
+                            theo dõi số liệu 24/7.
+                            Đồng thời đội ngũ chuyên gia gửi báo cáo phân tích,
+                            đề xuất tối ưu và họp định kỳ hàng tuần hoặc hàng tháng.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Mỗi Card FAQ hoạt động độc lập
+    document.querySelectorAll(".ga-faq-card").forEach(function(card){
+
+        const items = card.querySelectorAll(".ga-faq-item");
+
+        items.forEach(function(item){
+
+            item.querySelector(".ga-faq-question").addEventListener("click", function(){
+
+                const isActive = item.classList.contains("active");
+
+                // Đóng toàn bộ câu hỏi trong cùng Card
+                items.forEach(function(el){
+                    el.classList.remove("active");
+                });
+
+                // Nếu chưa mở thì mở
+                if(!isActive){
+                    item.classList.add("active");
+                }
+
+            });
+
+        });
+
+    });
+
+});
+
+</script>
+
+<style>
+
+.ga-contact{
+padding:110px 20px;
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+font-family:Arial,sans-serif;
+}
+
+.ga-contact-container{
+max-width:1200px;
+margin:auto;
+display:flex;
+align-items:center;
+gap:70px;
+}
+
+.ga-contact-left{
+flex:1;
+color:#fff;
+}
+
+.ga-contact-left h2{
+font-size:48px;
+line-height:1.2;
+font-weight:700;
+margin-bottom:22px;
+}
+
+.ga-contact-left h2 span{
+color:#60a5fa;
+}
+
+.ga-contact-left p{
+font-size:18px;
+line-height:1.8;
+color:rgba(255,255,255,.8);
+margin-bottom:40px;
+}
+
+.ga-benefits{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+margin-bottom:40px;
+
+}
+
+.ga-benefit{
+
+display:flex;
+
+align-items:center;
+
+gap:16px;
+
+background:rgba(255,255,255,.08);
+
+padding:18px 20px;
+
+border-radius:18px;
+
+backdrop-filter:blur(8px);
+
+}
+
+.ga-benefit-icon{
+
+width:52px;
+
+height:52px;
+
+border-radius:14px;
+
+background:#2563eb;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:24px;
+
+}
+
+.ga-benefit-text h4{
+
+margin:0 0 6px;
+
+font-size:18px;
+
+}
+
+.ga-benefit-text p{
+
+margin:0;
+
+font-size:15px;
+
+line-height:1.6;
+
+color:rgba(255,255,255,.75);
+
+}
+
+.ga-hotline{
+
+margin-top:25px;
+
+display:flex;
+
+align-items:center;
+
+gap:16px;
+
+font-size:18px;
+
+font-weight:700;
+
+}
+
+.ga-hotline span{
+
+font-size:34px;
+
+color:#60a5fa;
+
+}
+
+.ga-partner{
+
+margin-top:35px;
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
+
+}
+
+.ga-partner img{
+
+height:70px;
+
+}
+
+.ga-consultant{
+
+margin-top:40px;
+
+}
+
+.ga-consultant img{
+
+width:100%;
+
+max-width:420px;
+
+border-radius:22px;
+
+display:block;
+
+}
+
+.ga-form-card{
+
+width:500px;
+
+background:#fff;
+
+border-radius:24px;
+
+padding:40px;
+
+box-shadow:0 30px 70px rgba(0,0,0,.18);
+
+}
+
+.ga-form-card h3{
+
+font-size:32px;
+
+margin-bottom:10px;
+
+color:#1f2937;
+
+}
+
+.ga-form-card p{
+
+margin-bottom:28px;
+
+color:#6b7280;
+
+line-height:1.7;
+
+}
+
+.ga-form-group{
+
+margin-bottom:18px;
+
+}
+
+.ga-form-group input,
+.ga-form-group textarea{
+
+width:100%;
+padding:16px 18px;
+border:1px solid #d1d5db;
+border-radius:12px;
+
+font-family:Arial,sans-serif;
+font-size:16px;
+font-weight:400;
+line-height:1.6;
+color:#111827;
+
+box-sizing:border-box;
+transition:.3s;
+outline:none;
+
+}
+.ga-form-group input::placeholder,
+.ga-form-group textarea::placeholder{
+
+font-family:Arial,sans-serif;
+font-size:16px;
+font-weight:400;
+color:#9ca3af;
+opacity:1;
+
+}
+
+.ga-form-group textarea{
+
+height:130px;
+
+resize:vertical;
+
+}
+
+.ga-form-group input:focus,
+
+.ga-form-group textarea:focus{
+
+border-color:#2563eb;
+
+box-shadow:0 0 0 4px rgba(37,99,235,.15);
+
+}
+
+.ga-submit{
+
+width:100%;
+
+height:58px;
+
+border:none;
+
+border-radius:14px;
+
+background:linear-gradient(90deg,#2563eb,#1d4ed8);
+
+color:#fff;
+
+font-size:18px;
+
+font-weight:700;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.ga-submit:hover{
+
+transform:translateY(-2px);
+
+box-shadow:0 15px 35px rgba(37,99,235,.35);
+
+}
+
+.ga-privacy{
+
+margin-top:18px;
+
+font-size:14px;
+
+text-align:center;
+
+color:#9ca3af;
+
+line-height:1.6;
+
+}
+
+@media(max-width:991px){
+
+.ga-contact-container{
+
+flex-direction:column;
+
+}
+
+.ga-form-card{
+
+width:100%;
+
+}
+
+}
+
+@media(max-width:767px){
+
+.ga-contact{
+
+padding:70px 20px;
+
+}
+
+.ga-contact-left h2{
+
+font-size:36px;
+
+}
+
+.ga-form-card{
+
+padding:28px;
+
+}
+
+}
+.ga-form-card h3{
+    text-align:center;
+}
+
+</style>
+
+<section class="ga-contact">
+
+    <div class="ga-contact-container">
+
+        <!--========================
+            LEFT CONTENT
+        =========================-->
+
+        <div class="ga-contact-left">
+
+            <h2>
+
+                Sẵn sàng tăng trưởng<br>
+
+                cùng <span>Google Ads</span>?
+
+            </h2>
+
+            <p>
+
+                Đội ngũ chuyên gia Google Ads của LADIGI sẽ phân tích miễn phí tình trạng quảng cáo hiện tại và đề xuất chiến lược phù hợp giúp doanh nghiệp tăng khách hàng, tối ưu ngân sách và nâng cao doanh thu.
+
+            </p>
+
+            <div class="ga-benefits">
+
+                <div class="ga-benefit">
+
+                    <div class="ga-benefit-icon">
+                        📈
+                    </div>
+
+                    <div class="ga-benefit-text">
+
+                        <h4>Tăng khách hàng tiềm năng</h4>
+
+                        <p>
+                            Tiếp cận đúng người có nhu cầu ngay khi họ tìm kiếm.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="ga-benefit">
+
+                    <div class="ga-benefit-icon">
+                        💰
+                    </div>
+
+                    <div class="ga-benefit-text">
+
+                        <h4>Tối ưu ngân sách quảng cáo</h4>
+
+                        <p>
+                            Giảm CPC, CPA và tăng hiệu quả đầu tư (ROAS).
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="ga-benefit">
+
+                    <div class="ga-benefit-icon">
+                        🤝
+                    </div>
+
+                    <div class="ga-benefit-text">
+
+                        <h4>Đồng hành cùng doanh nghiệp</h4>
+
+                        <p>
+                            Báo cáo minh bạch, tối ưu liên tục và hỗ trợ 1-1.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="ga-partner">
+
+                <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg">
+
+
+            </div>
+
+
+        </div>
+
+        <!--========================
+            FORM
+        =========================-->
+
+        <div class="ga-form-card">
+
+            <h3>
+
+                Đăng ký tư vấn miễn phí
+
+            </h3>
+
+            <p>
+
+                Chúng tôi sẽ liên hệ trong vòng <strong>30 phút</strong> để tư vấn chiến lược phù hợp với doanh nghiệp của bạn.
+
+            </p>
+
+            <form>
+
+                <div class="ga-form-group">
+
+                    <input
+                        type="text"
+                        placeholder="Họ và tên *"
+                    >
+
+                </div>
+
+                <div class="ga-form-group">
+
+                    <input
+                        type="tel"
+                        placeholder="Số điện thoại *"
+                    >
+
+                </div>
+
+                <div class="ga-form-group">
+
+                    <input
+                        type="email"
+                        placeholder="Email"
+                    >
+
+                </div>
+
+                <div class="ga-form-group">
+
+                    <input
+                        type="text"
+                        placeholder="Website doanh nghiệp"
+                    >
+
+                </div>
+
+                <div class="ga-form-group">
+
+                    <textarea
+                        type="text"
+                        placeholder="Mô tả nhu cầu của bạn..."
+                    ></textarea>
+
+                </div>
+
+                <button class="ga-submit">
+
+                    Đăng ký ngay
+
+                </button>
+
+            </form>
+
+            <div class="ga-privacy">
+
+                🔒 Thông tin của bạn được bảo mật tuyệt đối.
+                Chúng tôi chỉ sử dụng để tư vấn và không chia sẻ cho bên thứ ba.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
