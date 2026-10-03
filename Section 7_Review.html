@@ -1,0 +1,416 @@
+<style>
+
+.ga-review{
+padding:100px 20px;
+background:#f7fafd;
+font-family:Arial,sans-serif;
+}
+
+.ga-review-container{
+max-width:1200px;
+margin:auto;
+}
+
+.ga-review-head{
+text-align:center;
+max-width:760px;
+margin:auto;
+margin-bottom:60px;
+}
+
+.ga-review-title{
+font-size:44px;
+font-weight:700;
+line-height:1.2;
+color:#1b1f3b;
+margin-bottom:20px;
+}
+
+.ga-review-title span{
+color:#2563eb;
+}
+
+.ga-review-desc{
+font-size:18px;
+line-height:1.8;
+color:#5f6b7a;
+}
+
+.ga-video{
+position:relative;
+border-radius:24px;
+overflow:hidden;
+margin-bottom:60px;
+box-shadow:0 25px 60px rgba(0,0,0,.08);
+cursor:pointer;
+}
+
+.ga-video img{
+width:100%;
+display:block;
+aspect-ratio:16/9;
+object-fit:cover;
+transition:.4s;
+}
+
+.ga-video:hover img{
+transform:scale(1.04);
+}
+
+.ga-play{
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%,-50%);
+width:90px;
+height:90px;
+background:#2563eb;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+color:#fff;
+font-size:34px;
+box-shadow:0 15px 35px rgba(37,99,235,.35);
+}
+
+.ga-slider{
+overflow:hidden;
+position:relative;
+}
+
+.ga-track{
+    display:flex;
+    gap:24px;
+    transition:.45s;
+}
+
+.ga-review-card{
+    flex:0 0 calc((100% - 48px) / 3);
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 15px 40px rgba(0,0,0,.06);
+    box-sizing:border-box;
+}
+
+.ga-user{
+display:flex;
+align-items:center;
+margin-bottom:20px;
+}
+
+.ga-user img{
+width:72px;
+height:72px;
+border-radius:50%;
+object-fit:cover;
+margin-right:18px;
+}
+
+.ga-user h4{
+margin:0;
+font-size:20px;
+color:#1b1f3b;
+}
+
+.ga-user span{
+display:block;
+font-size:15px;
+margin-top:4px;
+color:#6b7280;
+}
+
+.ga-star{
+margin:20px 0;
+font-size:20px;
+color:#fbbf24;
+letter-spacing:2px;
+}
+
+.ga-review-card p{
+font-size:16px;
+line-height:1.8;
+color:#6b7280;
+margin:0;
+}
+
+.ga-nav{
+display:flex;
+justify-content:center;
+margin-top:35px;
+gap:16px;
+}
+
+.ga-nav-btn{
+width:48px;
+height:48px;
+border:none;
+background:#2563eb;
+color:#fff;
+font-size:22px;
+border-radius:50%;
+cursor:pointer;
+transition:.3s;
+}
+
+.ga-nav-btn:hover{
+background:#174db8;
+}
+
+@media(max-width:991px){
+
+.ga-review-card{
+flex:0 0 calc(50% - 12px);
+}
+
+.ga-review-title{
+font-size:36px;
+}
+
+}
+
+@media(max-width:767px){
+
+.ga-review-card{
+flex:0 0 100%;
+}
+
+.ga-review{
+padding:70px 20px;
+}
+
+.ga-review-title{
+font-size:30px;
+}
+
+}
+
+</style>
+
+<section class="ga-review">
+
+<div class="ga-review-container">
+
+<div class="ga-review-head">
+
+<h2 class="ga-review-title">
+
+KHÁCH HÀNG NÓI GÌ VỀ DỊCH VỤ GOOGLE ADS CỦA <span>LADIGI AGENCY</span>
+
+</h2>
+
+<p class="ga-review-desc">
+
+Những phản hồi thực tế từ doanh nghiệp đã triển khai Google Ads cùng LADIGI AGENCY.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="ga-slider">
+
+<div class="ga-track" id="gaTrack">
+
+<div class="ga-review-card">
+
+<div class="ga-user">
+
+<img src="https://i.pravatar.cc/150?img=12">
+
+<div>
+
+<h4>Nguyễn Minh Anh</h4>
+
+<span>CÔNG TY VẢI VÂN SINH</span>
+
+</div>
+
+</div>
+
+<div class="ga-star">★★★★★</div>
+
+<p>
+
+Sau 3 tháng triển khai, chi phí mỗi khách hàng giảm gần 40% và lượng đơn hàng tăng ổn định.
+
+</p>
+
+</div>
+<div class="ga-review-card">
+    <div class="ga-user">
+        <img src="https://i.pravatar.cc/150?img=30">
+        <div>
+            <h4>Phạm Gia Bảo</h4>
+            <span>FOUNDER ANH DUY AUDIO</span>
+        </div>
+    </div>
+    <div class="ga-star">★★★★★</div>
+    <p>
+        Google Ads mang về lượng khách chất lượng hơn kỳ vọng. Doanh thu tăng đều qua từng tháng.
+    </p>
+</div>
+
+<div class="ga-review-card">
+    <div class="ga-user">
+        <img src="https://i.pravatar.cc/150?img=36">
+        <div>
+            <h4>Đỗ Thanh Tùng</h4>
+            <span>GIÁM ĐỐC DOCTOR HOME</span>
+        </div>
+    </div>
+    <div class="ga-star">★★★★★</div>
+    <p>
+        LADIGI AGENCY tối ưu rất sát ngân sách, giúp chúng tôi giảm đáng kể chi phí cho mỗi khách hàng tiềm năng.
+    </p>
+</div>
+
+<div class="ga-review-card">
+    <div class="ga-user">
+        <img src="https://i.pravatar.cc/150?img=45">
+        <div>
+            <h4>Hoàng Ngọc Mai</h4>
+            <span>CEO KÍNH MIỀN NAM</span>
+        </div>
+    </div>
+    <div class="ga-star">★★★★★</div>
+    <p>
+        Đội ngũ hỗ trợ nhiệt tình, luôn theo sát chiến dịch và đề xuất hướng tối ưu để tăng hiệu quả quảng cáo.
+    </p>
+</div>
+
+<div class="ga-review-card">
+
+<div class="ga-user">
+
+<img src="https://i.pravatar.cc/150?img=18">
+
+<div>
+
+<h4>Lê Quốc Huy</h4>
+
+<span>CEO PROFA</span>
+
+</div>
+
+</div>
+
+<div class="ga-star">★★★★★</div>
+
+<p>
+
+Đội ngũ hỗ trợ rất nhanh, báo cáo minh bạch và luôn chủ động đề xuất hướng tối ưu.
+
+</p>
+
+</div>
+
+<div class="ga-review-card">
+
+<div class="ga-user">
+
+<img src="https://i.pravatar.cc/150?img=22">
+
+<div>
+
+<h4>Trần Thu Hà</h4>
+
+<span>ANA BEAUTY ACADEMY</span>
+
+</div>
+
+</div>
+
+<div class="ga-star">★★★★★</div>
+
+<p>
+
+Lượng khách từ Google Ads tăng rõ rệt chỉ sau vài tuần. Chiến dịch được tối ưu liên tục.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="ga-nav">
+
+<button class="ga-nav-btn" id="gaPrev">‹</button>
+
+<button class="ga-nav-btn" id="gaNext">›</button>
+
+</div>
+
+</div>
+
+</section>
+
+<script>
+const track = document.getElementById("gaTrack");
+const cards = document.querySelectorAll(".ga-review-card");
+const next = document.getElementById("gaNext");
+const prev = document.getElementById("gaPrev");
+
+let index = 0;
+
+function visibleCards() {
+    if (window.innerWidth < 768) return 1;
+    if (window.innerWidth < 992) return 2;
+    return 3;
+}
+
+function cardWidth() {
+    return cards[0].offsetWidth + 24; // 24 = gap
+}
+
+function updateSlider() {
+    track.style.transform =
+        `translateX(-${index * cardWidth()}px)`;
+}
+
+function maxIndex() {
+    return cards.length - visibleCards();
+}
+
+next.onclick = () => {
+    index++;
+
+    if(index > maxIndex()){
+        index = 0;
+    }
+
+    updateSlider();
+}
+
+prev.onclick = () => {
+    index--;
+
+    if(index < 0){
+        index = maxIndex();
+    }
+
+    updateSlider();
+}
+
+window.addEventListener("resize", updateSlider);
+
+// autoplay
+let auto = setInterval(()=>{
+    next.click();
+},4000);
+
+// hover dừng
+document.querySelector(".ga-slider").addEventListener("mouseenter",()=>{
+    clearInterval(auto);
+});
+
+document.querySelector(".ga-slider").addEventListener("mouseleave",()=>{
+    auto = setInterval(()=>{
+        next.click();
+    },4000);
+});
+</script>

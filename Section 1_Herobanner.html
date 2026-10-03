@@ -1,0 +1,325 @@
+<style>
+/* =========================================
+   CSS CHO HEADER (KHÔNG XUNG ĐỘT)
+========================================= */
+.ga-header {
+    width: 100%;
+    background: #ffffff;
+    border-bottom: 1px solid #edf2f7; 
+    font-family: Arial, sans-serif;
+    position: relative;
+    z-index: 99;
+}
+
+.ga-header-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+}
+
+.ga-header-logo {
+    display: flex;
+    align-items: center;
+}
+
+.ga-header-logo img {
+    height: 80px;
+    width: 300px;
+    display: block;
+    object-fit: contain;
+}
+
+.ga-nav-menu {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+}
+
+.ga-nav-link {
+    text-decoration: none;
+    color: #1f2937;
+    font-size: 17px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.ga-nav-link:hover, 
+.ga-nav-link.active {
+    color: #0284c7;
+}
+
+.ga-header-cta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #0277bd;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    transition: background 0.3s;
+}
+
+.ga-header-cta:hover {
+    background: #025e97;
+}
+
+.ga-cta-icon {
+    background: #ffffff;
+    color: #0277bd;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+}
+
+/* Responsive Header */
+@media (max-width: 768px) {
+    .ga-header-container {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .ga-nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+}
+
+/* =========================================
+   CSS CHO HERO BANNER (ẢNH LÀM BACKGROUND)
+========================================= */
+.ga-hero {
+    padding: 120px 20px; 
+    /* Giữ nguyên lớp phủ mờ, chỉ thay đổi phần url() ở cuối */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0.1) 100%), 
+                url('../FULL\ ẢNH/IMG SECTION 1_HEROBANNER.jpg'); /* ĐIỀN ĐƯỜNG DẪN ../ CỦA BẠN VÀO ĐÂY */
+    background-size: cover; 
+    background-position: center right; 
+    background-repeat: no-repeat;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.ga-hero-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    min-height: 500px;
+}
+
+/* Phần chữ bên trái chiếm 45% */
+.ga-left {
+    flex: 0 0 45%;
+    max-width: 45%;
+    position: relative;
+    z-index: 10;
+    padding-right: 30px; 
+}
+
+/* KHÔNG CẦN .ga-right VÀ .ga-hero-img NỮA NÊN ĐÃ BỎ ĐI ĐỂ CODE NHẸ HƠN */
+
+/* Responsive Hero */
+@media(max-width:992px){
+    .ga-hero {
+        /* Phủ mờ toàn bộ nền trên điện thoại để chữ dễ đọc */
+        background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), 
+                    url('../FULL\ ẢNH/IMG SECTION 1_HEROBANNER.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+    .ga-hero-container{
+        flex-direction:column;
+        text-align:left; /* Căn trái cho đẹp trên mobile */
+        min-height: auto;
+    }
+    .ga-left{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: 0;
+    }
+}
+.ga-badge{
+    display:inline-block;
+    background:#e8f1ff;
+    color:#2563eb;
+    padding:10px 18px;
+    border-radius:999px;
+    font-size:14px;
+    font-weight:700;
+    margin-bottom:24px;
+}
+
+.ga-title{
+    font-size:40px;
+    font-weight:700;
+    line-height:1.2;
+    color:#1b1f3b;
+    margin:0 0 28px;
+}
+
+.ga-title span{
+    color:#2563eb;
+}
+
+.ga-desc{
+    font-size:20px;
+    line-height:1.8;
+    color:#5f6b7a;
+    margin-bottom:32px;
+}
+
+.ga-list{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-bottom:38px;
+}
+
+.ga-item{
+    display:flex;
+    align-items:center;
+    font-size:17px;
+    font-weight:600;
+    color:#263246;
+}
+
+.ga-item:before{
+    content:"✔";
+    color:#2563eb;
+    margin-right:12px;
+    font-weight:bold;
+}
+
+.ga-buttons{
+    display:flex;
+    gap:18px;
+    margin-bottom:42px;
+    flex-wrap:wrap;
+}
+
+.ga-btn{
+    padding:18px 34px;
+    border-radius:16px;
+    text-decoration:none;
+    font-weight:700;
+    transition:.3s;
+}
+
+.ga-btn-primary{
+    background:#2563eb;
+    color:#fff;
+}
+
+.ga-btn-primary:hover{
+    background:#124fc8;
+}
+
+.ga-btn-outline{
+    border:2px solid #2563eb;
+    color:#2563eb;
+}
+
+.ga-btn-outline:hover{
+    background:#2563eb;
+    color:#fff;
+}
+
+/* Responsive Hero */
+@media(max-width:992px){
+    .ga-hero-container{
+        flex-direction:column;
+        text-align:center;
+        min-height: auto;
+    }
+    .ga-left{
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding-right: 0;
+    }
+    .ga-right{
+        position: relative;
+        top: 0;
+        transform: none;
+        width: 100%;
+        margin-top: 40px;
+    }
+    .ga-list{
+        grid-template-columns:1fr;
+    }
+    .ga-buttons{
+        justify-content:center;
+    }
+    .ga-title{
+        font-size:42px;
+    }
+}
+
+@media(max-width:576px){
+    .ga-title{
+        font-size:34px;
+    }
+    .ga-desc{
+        font-size:17px;
+    }
+    .ga-btn{
+        width:100%;
+        text-align:center;
+    }
+}
+</style>
+
+<header class="ga-header">
+    <div class="ga-header-container">
+        <div class="ga-header-logo">
+            <img src="../FULL ẢNH/IMG LOGO.jpg" alt="LADIGI Logo">
+        </div>
+        <nav class="ga-nav-menu">
+            <a href="#" class="ga-nav-link">Giới thiệu</a>
+            <a href="#" class="ga-nav-link">Dịch vụ SEO</a>
+            <a href="#" class="ga-nav-link active">Google Ads</a>
+            <a href="#" class="ga-nav-link">Thiết kế web</a>
+        </nav>
+        <div class="ga-header-action">
+            <a href="#" class="ga-header-cta">
+                <span class="ga-cta-icon">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14"></path>
+                        <path d="m12 5 7 7-7 7"></path>
+                    </svg>
+                </span>
+                Nhận Báo Giá
+            </a>
+        </div>
+    </div>
+</header>
+<section class="ga-hero">
+    <div class="ga-hero-container">
+        <div class="ga-left">
+            <h1 class="ga-title">
+                <span>DỊCH VỤ QUẢNG CÁO <br> GOOGLE ADS TRỌN GÓI</span>
+            </h1>
+            <p class="ga-desc">
+                Tiếp cận đúng khách hàng tiềm năng, tối ưu ngân sách quảng cáo và gia tăng chuyển đổi với đội ngũ chuyên gia LADIGI giàu kinh nghiệm.
+            </p>
+            <div class="ga-list">
+                <div class="ga-item">Google Partner</div>
+                <div class="ga-item">Tối ưu ROAS</div>
+                <div class="ga-item">Báo cáo minh bạch</div>
+                <div class="ga-item">Đồng hành 1-1</div>
+            </div>
+            <div class="ga-buttons">
+                <a href="#" class="ga-btn ga-btn-primary">Nhận tư vấn miễn phí</a>
+            </div>
+        </div>
+    </div>
+</section>

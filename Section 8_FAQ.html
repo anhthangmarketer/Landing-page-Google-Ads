@@ -1,0 +1,462 @@
+<style>
+
+.ga-faq{
+padding:100px 20px;
+background:#f8fbff;
+font-family:Arial,sans-serif;
+}
+
+.ga-faq-container{
+max-width:1200px;
+margin:auto;
+}
+
+.ga-faq-head{
+text-align:center;
+max-width:760px;
+margin:auto auto 70px;
+}
+
+.ga-faq-head h2{
+font-size:44px;
+font-weight:700;
+color:#1b1f3b;
+margin-bottom:18px;
+}
+
+.ga-faq-head h2 span{
+color:#2563eb;
+}
+
+.ga-faq-head p{
+font-size:18px;
+line-height:1.8;
+color:#6b7280;
+}
+
+.ga-faq-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
+
+.ga-faq-card{
+
+background:#fff;
+
+border-radius:24px;
+
+padding:36px;
+
+box-shadow:0 18px 50px rgba(0,0,0,.05);
+
+}
+
+.ga-faq-group{
+
+display:flex;
+
+align-items:center;
+
+gap:14px;
+
+margin-bottom:30px;
+
+}
+
+.ga-faq-icon{
+
+width:48px;
+
+height:48px;
+
+border-radius:14px;
+
+background:#2563eb;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:22px;
+
+color:#fff;
+
+}
+
+.ga-faq-group h3{
+
+font-size:24px;
+
+margin:0;
+
+color:#1b1f3b;
+
+}
+
+.ga-faq-item{
+
+border-top:1px solid #edf0f5;
+
+}
+
+.ga-faq-item:first-child{
+
+border:none;
+
+}
+
+.ga-faq-question{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+cursor:pointer;
+
+padding:22px 0;
+
+font-size:17px;
+
+font-weight:600;
+
+color:#1f2937;
+
+}
+
+.ga-faq-arrow{
+
+transition:.3s;
+
+font-size:22px;
+
+color:#2563eb;
+
+}
+
+.ga-faq-answer{
+
+max-height:0;
+
+overflow:hidden;
+
+transition:max-height .35s ease;
+
+}
+
+.ga-faq-answer p{
+
+padding-bottom:22px;
+
+font-size:16px;
+
+line-height:1.8;
+
+color:#6b7280;
+
+}
+
+.ga-faq-item.active .ga-faq-answer{
+
+max-height:300px;
+
+}
+
+.ga-faq-item.active .ga-faq-arrow{
+
+transform:rotate(180deg);
+
+}
+
+@media(max-width:991px){
+
+.ga-faq-grid{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+@media(max-width:767px){
+
+.ga-faq{
+
+padding:70px 20px;
+
+}
+
+.ga-faq-head h2{
+
+font-size:34px;
+
+}
+
+}
+
+</style>
+<section class="ga-faq">
+
+    <div class="ga-faq-container">
+
+        <div class="ga-faq-head">
+
+            <h2>
+                NHỮNG CÂU HỎI THƯỜNG GẶP
+            </h2>
+
+            <p>
+                Giải đáp các thắc mắc phổ biến về chi phí, quy trình triển khai và cam kết dịch vụ
+                Google Ads tại LADIGI AGENCY.
+            </p>
+
+        </div>
+
+        <div class="ga-faq-grid">
+
+            <!--=========================
+                NHÓM 1
+            ==========================-->
+
+            <div class="ga-faq-card">
+
+                <div class="ga-faq-group">
+
+                    <div class="ga-faq-icon">
+                        💰
+                    </div>
+
+                    <h3>
+                        Chi phí & Ngân sách
+                    </h3>
+
+                </div>
+
+                <div class="ga-faq-item active">
+
+                    <div class="ga-faq-question">
+
+                        <span>
+                            Phí dịch vụ của Agency được tính thế nào?
+                        </span>
+
+                        <div class="ga-faq-arrow">
+                            ▼
+                        </div>
+
+                    </div>
+
+                    <div class="ga-faq-answer">
+
+                        <p>
+                            LADIGI áp dụng hai hình thức linh hoạt:
+                            <strong>thu phí quản lý cố định theo tháng (Fix Fee)</strong>
+                            hoặc
+                            <strong>tính theo tỷ lệ (%) trên tổng ngân sách quảng cáo.</strong>
+                            Chúng tôi sẽ tư vấn phương án phù hợp nhất theo quy mô doanh nghiệp.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="ga-faq-item">
+
+                    <div class="ga-faq-question">
+
+                        <span>
+                            Tiền chạy quảng cáo sẽ nạp cho ai?
+                        </span>
+
+                        <div class="ga-faq-arrow">
+                            ▼
+                        </div>
+
+                    </div>
+
+                    <div class="ga-faq-answer">
+
+                        <p>
+                            Toàn bộ ngân sách quảng cáo được doanh nghiệp thanh toán trực tiếp cho
+                            Google thông qua thẻ ngân hàng của mình.
+                            Bạn hoàn toàn kiểm soát tài khoản và hạn mức chi tiêu mỗi ngày.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="ga-faq-item">
+
+                    <div class="ga-faq-question">
+
+                        <span>
+                            Có phát sinh thêm chi phí nào khác không?
+                        </span>
+
+                        <div class="ga-faq-arrow">
+                            ▼
+                        </div>
+
+                    </div>
+
+                    <div class="ga-faq-answer">
+
+                        <p>
+                            Không có chi phí ẩn.
+                            Trong một số trường hợp Website hoặc Landing Page chưa tối ưu,
+                            chúng tôi sẽ tư vấn nâng cấp để giúp quảng cáo đạt hiệu quả chuyển đổi tốt hơn.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--=========================
+                NHÓM 2
+            ==========================-->
+
+            <div class="ga-faq-card">
+
+                <div class="ga-faq-group">
+
+                    <div class="ga-faq-icon">
+                        🚀
+                    </div>
+
+                    <h3>
+                        Quy trình & Cam kết
+                    </h3>
+
+                </div>
+
+                <div class="ga-faq-item active">
+
+                    <div class="ga-faq-question">
+
+                        <span>
+                            Chạy bao lâu thì có kết quả?
+                        </span>
+
+                        <div class="ga-faq-arrow">
+                            ▼
+                        </div>
+
+                    </div>
+
+                    <div class="ga-faq-answer">
+
+                        <p>
+                            Quảng cáo có thể bắt đầu hiển thị ngay sau khi được Google phê duyệt.
+                            Tuy nhiên, để hệ thống AI và đội ngũ tối ưu hiệu quả,
+                            chiến dịch thường cần khoảng
+                            <strong>2–4 tuần</strong>
+                            để thu thập dữ liệu và tối ưu chuyển đổi.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="ga-faq-item">
+
+                    <div class="ga-faq-question">
+
+                        <span>
+                            Agency có cam kết doanh số không?
+                        </span>
+
+                        <div class="ga-faq-arrow">
+                            ▼
+                        </div>
+
+                    </div>
+
+                    <div class="ga-faq-answer">
+
+                        <p>
+                            LADIGI cam kết tối ưu kỹ thuật quảng cáo,
+                            đúng tệp khách hàng,
+                            giảm CPC/CPA và tăng tỷ lệ chuyển đổi.
+                            Doanh số cuối cùng còn phụ thuộc vào sản phẩm,
+                            giá bán và quy trình tư vấn của doanh nghiệp.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="ga-faq-item">
+
+                    <div class="ga-faq-question">
+
+                        <span>
+                            Quy trình báo cáo kết quả như thế nào?
+                        </span>
+
+                        <div class="ga-faq-arrow">
+                            ▼
+                        </div>
+
+                    </div>
+
+                    <div class="ga-faq-answer">
+
+                        <p>
+                            Bạn sẽ được cấp Dashboard Google Looker Studio
+                            theo dõi số liệu 24/7.
+                            Đồng thời đội ngũ chuyên gia gửi báo cáo phân tích,
+                            đề xuất tối ưu và họp định kỳ hàng tuần hoặc hàng tháng.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Mỗi Card FAQ hoạt động độc lập
+    document.querySelectorAll(".ga-faq-card").forEach(function(card){
+
+        const items = card.querySelectorAll(".ga-faq-item");
+
+        items.forEach(function(item){
+
+            item.querySelector(".ga-faq-question").addEventListener("click", function(){
+
+                const isActive = item.classList.contains("active");
+
+                // Đóng toàn bộ câu hỏi trong cùng Card
+                items.forEach(function(el){
+                    el.classList.remove("active");
+                });
+
+                // Nếu chưa mở thì mở
+                if(!isActive){
+                    item.classList.add("active");
+                }
+
+            });
+
+        });
+
+    });
+
+});
+
+</script>
